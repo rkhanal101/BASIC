@@ -1,0 +1,93 @@
+{
+	"HOTELS":[
+		{
+			"Hotelename":"Meridian Suite Hotel",
+			"situated_in":"Central Development Region",
+			"NO_of_staffs":90,
+			"visitorsRating out of 10":6.5,
+			"priceperdaywithmealandbreakfast":2300,
+			"ExtendedPrice": 87.2000,
+			"stars": "3star",
+			 "Status": "A",
+			"Location":"Tribhuwan International Airport",
+			"GROUPNAME" : ""
+		},
+		{
+			"Hotelename":"Hotel Shankar",
+			"situated_in":"central Development Region",
+			"NO_of_staffs":300,
+			"visitorsRating out of 10":8.5,
+				"priceperdaywithmealandbreakfast":3000,
+				"ExtendedPrice": 87.2000,
+				"stars":"3.5star",
+				"Location": "Lazimpat",
+				 "Status": "A"
+		},
+		{
+	    	"Hotelename":"Club Himalaya Resort",
+			"situated_in":"central Development Region",
+			"NO_of_staffs":123,
+			"visitorsRating out of 10":9,
+				"priceperdaywithmealandbreakfast":3600,
+								"stars":"4star",
+					"ExtendedPrice": 87.2000,
+						"Location": "Nagarkot Kathmandu Nepal",
+					 "Status": "A"
+		},
+		{
+				"Hotelename":"Avataar Kathmandu Nepal",
+			"situated_in":"central Development Region",
+			"NO_of_staffs":123,
+			"visitorsRating out of 10":9,
+				"priceperdaywithmealandbreakfast":1600,
+					"ExtendedPrice": 87.2000,
+					"Location": "Thamel kathmandu Nepal",
+									"stars":"3.5star",
+									 "Status": "B"
+			
+		},
+		{	"Hotelename":"HOTEL OSHO HOME",
+			"situated_in":"central Development Region",
+			"NO_of_staffs":123,
+			"visitorsRating out of 10":8,
+				"priceperdaywithmealandbreakfast":1500,
+					"ExtendedPrice": 87.2000,
+					"Location": "Thamel kathmandu Nepal",
+									"stars":"3.5star",
+									 "Status": "B"
+		},
+		{
+				"Hotelename":"OYO 104 BALTIC INN",
+			"situated_in":"central Development Region",
+			"NO_of_staffs":123,
+			"visitorsRating out of 10":6,
+				"priceperdaywithmealandbreakfast":1200,
+					"ExtendedPrice": 87.2000,
+					"Location": "TIA kathmandu Nepal",
+									"stars":"6.5star",
+				                    "Status": "B"
+		},
+		{
+				"Hotelename":"Hotel Yambhu ",
+			"situated_in":"central Development Region",
+			"NO_of_staffs":123,
+			"visitorsRating out of 10":9,
+				"priceperdaywithmealandbreakfast":2600,
+					"ExtendedPrice": 87.2000,
+					"Location":"Thamel Kathmandu Nepal",
+									"stars":"3.5star",
+									 "Status": "B"
+		},
+			{
+				"Hotelename":"Hotel Dwarika ",
+			"situated_in":"central Development Region",
+			"NO_of_staffs":123,
+			"visitorsRating out of 10":9,
+				"priceperdaywithmealandbreakfast":2000,
+					"ExtendedPrice": 87.2000,
+					"Location":"TIA Kathmandu Nepal",
+									"stars":"3.5star",
+									 "Status": "B"
+		}
+		
+		]}

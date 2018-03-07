@@ -1,0 +1,55 @@
+<mvc:View
+  controllerName="BASIC.controller.HOTELList"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <List
+      id="HOTELLIST"
+      headerText="{i18n>HOTELListTitle}"
+      class="sapUiResponsiveMargin"
+      width="auto"
+      items="{
+      path: 'HOTELS>/Invoices',
+      sorter : {
+      path : 'ShipperName',
+      group: true
+      }
+      }" >
+   	<headerToolbar>
+   		<Toolbar>
+   			<Title text="{i18n>HOTELListTitle}"/>
+   		<ToolbarSpacer/>
+   		<SearchField width="50%" search="onFilterHOTELS"/>
+   		</Toolbar>
+   			
+
+   	</headerToolbar>
+         <items>
+         <ObjectListItem
+		   title="{HOTELS>ProductName},{HOTELS>Quantity}"
+		   
+		number="{
+			parts: [{path: 'HOTELS>ExtendedPrice'}, {path: 'view>/currency'}],
+			type: 'sap.ui.model.type.Currency',
+			formatOptions: {
+				showMeasure: false
+			}
+		}"
+		numberUnit ="{view>/currency}"
+		numberState="{= ${HOTELS>ExtendedPrice}>2350 ? 'Error' : 'Success' }"
+		type = "Navigation"
+		press = "onPress"
+		>
+         	<firstStatus>
+         		<ObjectStatus text="{
+         		path: 'HOTELS>Status',
+         		formatter: '.formatter.statusText'
+         		}"/>
+         		
+         	</firstStatus>
+         	</ObjectListItem>
+
+	</items>
+          
+      
+   </List>
+</mvc:View>
