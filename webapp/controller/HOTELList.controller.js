@@ -22,7 +22,7 @@ sap.ui.define([
 		 		var aFilter = [];
 		 		var sQuery = oEvent.getParameter("query");
 		 		if (sQuery){
-		 			aFilter.push(new Filter("ProductName", FilterOperator.Contains, sQuery));
+		 			aFilter.push(new Filter("Hotelename", FilterOperator.Contains, sQuery));
 		 		}
 		 		
 		 		//filter binding 
@@ -33,7 +33,9 @@ sap.ui.define([
 		 	onPress: function (oEvent) {
 		 	var oItem = oEvent.getSource();
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("detail");
+			oRouter.navTo("detail",{
+				HOTELSPath: encodeURIComponent(oItem.getBindingContext("HOTELS").getPath().substr(1))
+			});
 			
 		
 		}

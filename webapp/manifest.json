@@ -75,7 +75,9 @@
 				}
 			},
 		    "HOTELS": {
-		    		"dataSource": "HOTELSRemote"
+		    		"type": "sap.ui.model.json.JSONModel",
+				"uri": "HOTELs.json"
+			
 			  }
 	  
 		},
@@ -100,7 +102,7 @@
 					"target": "overview"
 				},
 				{
-					"pattern": "detail",
+					"pattern": "detail/{HOTELSPath}",
 					"name": "detail",
 					"target": "detail"
 				}

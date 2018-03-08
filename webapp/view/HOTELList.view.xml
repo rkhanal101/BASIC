@@ -8,9 +8,9 @@
       class="sapUiResponsiveMargin"
       width="auto"
       items="{
-      path: 'HOTELS>/Invoices',
+      path: 'HOTELS>/HOTELS',
       sorter : {
-      path : 'ShipperName',
+      path : 'Status',
       group: true
       }
       }" >
@@ -25,17 +25,17 @@
    	</headerToolbar>
          <items>
          <ObjectListItem
-		   title="{HOTELS>ProductName},{HOTELS>Quantity}"
+		   title="{HOTELS>Hotelename},{HOTELS>stars}"
 		   
 		number="{
-			parts: [{path: 'HOTELS>ExtendedPrice'}, {path: 'view>/currency'}],
+			parts: [{path: 'HOTELS>priceperdaywithmealandbreakfast'}, {path: 'view>/currency'}],
 			type: 'sap.ui.model.type.Currency',
 			formatOptions: {
 				showMeasure: false
 			}
 		}"
 		numberUnit ="{view>/currency}"
-		numberState="{= ${HOTELS>ExtendedPrice}>2350 ? 'Error' : 'Success' }"
+		numberState="{= ${HOTELS>priceperdaywithmealandbreakfast}>2350 ? 'Error' : 'Success' }"
 		type = "Navigation"
 		press = "onPress"
 		>
