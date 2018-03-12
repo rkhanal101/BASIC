@@ -3,7 +3,7 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	controllerName= "BASIC.controller.Detail"
 	xmlns:ht = "BASIC.control"
-	
+		xmlns:form="sap.ui.layout.form"
 > 
 		<Page
 		title="{i18n>detailPageTitle}"
@@ -11,15 +11,32 @@
 		navButtonPress="onNavBack">
 		<ObjectHeader
 			
-			title="HOTEL DETAILS"
-			intro="{HOTELS>Hotelename}"
-			/>
+			intro="HOTEL DETAILS"
+			title="{HOTELS>Hotelename}"
+					/>
+					<ht:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change="onRatingChange"/>
+		<Panel>
+			<content>
+				<form:SimpleForm>
+					<form:content>
+							<Label text="{i18n>Location}" />
+							<Text text="{HOTELS>Location}" />
+							<Label text="{i18n>stars}" />
+							<Text text="{HOTELS>stars}" />
+							<Label text="{i18n>Status}" />
+							<Text text="{HOTELS>Status}" />
+							
+					
+					</form:content>
+				</form:SimpleForm>
+			</content>
+		</Panel>
 
 	
 	
 				
 		
-			<ht:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change="onRatingChange"/>
+			
 	</Page>
 
 

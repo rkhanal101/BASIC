@@ -2,6 +2,13 @@
   controllerName="BASIC.controller.HOTELList"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
+  
+			
+   	 
+  
+   
+   
+   
    <List
       id="HOTELLIST"
       headerText="{i18n>HOTELListTitle}"
@@ -23,6 +30,7 @@
    			
 
    	</headerToolbar>
+  
          <items>
          <ObjectListItem
 		   title="{HOTELS>Hotelename},{HOTELS>stars}"

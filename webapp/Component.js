@@ -5,7 +5,7 @@ sap.ui.define([
 	"sap/ui/model/json/JSONModel",
 	"BASIC/controller/HelloDialog"
 	
-], function(UIComponent, Device, models, JSONModel, HelloDialog) {
+], function(UIComponent, Device, models, JSONModel, HelloDialog ) {
 	"use strict";
 
 	return UIComponent.extend("BASIC.Component", {
@@ -38,11 +38,17 @@ sap.ui.define([
              this.setModel(oModel);
              //set i18n model
            /*  var i18nModel = new ResourceModel({
-             	bundleName : "BASIC.i18n.i18n"
+             	bundleName : "BASIC.i18n.i18n                                                                                                                                                                                                                                    "
              });
+                                                                            
              
              
              this.setModel(i18nModel, "i18n");*/
+             // set device model
+			var oDeviceModel = new JSONModel(Device);
+			oDeviceModel.setDefaultBindingMode("OneWay");
+			this.setModel(oDeviceModel, "device");
+
              	// set dialog
 			this._helloDialog = new HelloDialog(this.getRootControl());
 			
@@ -62,6 +68,10 @@ sap.ui.define([
              
              
 			// set the device model
+			// set device model
+		// set device model
+		
+
 			
 		
 		

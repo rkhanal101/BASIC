@@ -26,15 +26,14 @@ sap.ui.define([
 				}
 			}
 			},
-			inint : function(){
-				this.setAggregation("_rating", new RatingIndicator({
-					value: this.getValue(),
-					iconSize : "2rem",
-					visualMode: "Half",
-					liveChange: this._onRate.bind(this)
-					
-				}));
-				this.setAggregation("_label", new Label({
+			init : function(){	
+			this.setAggregation("_rating", new RatingIndicator({
+				value: this.getValue(),
+				iconSize: "2rem",
+				visualMode: "Half",
+				liveChange: this._onRate.bind(this)
+			}));
+			this.setAggregation("_label", new Label({
 				text: "{i18n>productRatingLabelInitial}"
 			}).addStyleClass("sapUiSmallMargin"));
 			this.setAggregation("_button", new Button({
@@ -42,20 +41,42 @@ sap.ui.define([
 				press: this._onSubmit.bind(this)
 			}).addStyleClass("sapUiTinyMarginTopBottom"));
 		},
-	
-		
-			_onRate: function(oEvent) {
-				this.setValue(oEvent.getParameter("value"));
-				this.getAggregation("_button").setEnabled(true);
-			},
-				_onSubmit: function() {
-				this.fireEvent("valueSubmit", {
-					value: this.getValue()
-				});
-				this.getAggregation("_button").setEnabled(false);
-			},
-	
-			renderer : function (oRM, oControl) {
+
+		setValue: function (fValue) {
+			this.setProperty("value", fValue, true);
+			this.getAggregation("_rating").setValue(fValue);
+		},
+
+		reset: function () {
+			var oResourceBundle = this.getModel("i18n").getResourceBundle();
+			this.setValue(0);
+			this.getAggregation("_label").setDesign("Standard");
+			this.getAggregation("_rating").setEnabled(true);
+			this.getAggregation("_label").setText(oResourceBundle.getText("productRatingLabelInitial"));
+			this.getAggregation("_button").setEnabled(true);
+		},
+
+		_onRate : function (oEvent) {
+			var oRessourceBundle = this.getModel("i18n").getResourceBundle();
+			var fValue = oEvent.getParameter("value");
+
+			this.setProperty("value", fValue, true);
+
+			this.getAggregation("_label").setText(oRessourceBundle.getText("productRatingLabelIndicator", [fValue, oEvent.getSource().getMaxValue()]));
+			this.getAggregation("_label").setDesign("Bold");
+		},
+
+		_onSubmit : function (oEvent) {
+			var oResourceBundle = this.getModel("i18n").getResourceBundle();
+
+			this.getAggregation("_rating").setEnabled(false);
+			this.getAggregation("_label").setText(oResourceBundle.getText("productRatingLabelFinal"));
+			this.getAggregation("_button").setEnabled(false);
+			this.fireEvent("change", {
+				value: this.getValue()
+			});
+		},
+		renderer : function (oRM, oControl) {
 			oRM.write("<div");
 			oRM.writeControlData(oControl);
 			oRM.addClass("myAppDemoWTProductRating");
@@ -65,7 +86,8 @@ sap.ui.define([
 			oRM.renderControl(oControl.getAggregation("_label"));
 			oRM.renderControl(oControl.getAggregation("_button"));
 			oRM.write("</div>");
-		}
+				
+				}
 
 
 				
