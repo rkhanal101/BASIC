@@ -3,7 +3,8 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	controllerName= "BASIC.controller.Detail"
 	xmlns:ht = "BASIC.control"
-		xmlns:form="sap.ui.layout.form"
+	xmlns:form="sap.ui.layout.form"
+
 > 
 		<Page
 		title="{i18n>detailPageTitle}"
@@ -25,12 +26,14 @@
 							<Text text="{HOTELS>stars}" />
 							<Label text="{i18n>Status}" />
 							<Text text="{HOTELS>Status}" />
-							
+						
 					
 					</form:content>
 				</form:SimpleForm>
+					<Image src="{HOTELS>image}" width="400px" height="400px" />
 			</content>
 		</Panel>
+		
 
 	
 	

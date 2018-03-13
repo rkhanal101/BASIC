@@ -1,16 +1,13 @@
 <mvc:View
   controllerName="BASIC.controller.HOTELList"
    xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns:semantic="sap.m.semantic"
+   >
   
-			
-   	 
-  
-   
-   
-   
-   <List
-      id="HOTELLIST"
+
+   	 <List
+   	  id="HOTELLIST"
       headerText="{i18n>HOTELListTitle}"
       class="sapUiResponsiveMargin"
       width="auto"
@@ -20,7 +17,13 @@
       path : 'Status',
       group: true
       }
-      }" >
+      }"
+      mode="MultiSelect">
+  
+   
+   
+   
+  
    	<headerToolbar>
    		<Toolbar>
    			<Title text="{i18n>HOTELListTitle}"/>
@@ -59,5 +62,8 @@
 	</items>
           
       
-   </List>
+  </List>
+  
+ 
+   
 </mvc:View>

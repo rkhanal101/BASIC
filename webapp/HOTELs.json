@@ -10,7 +10,12 @@
 			"stars": "3star",
 			 "Status": "A",
 			"Location":"Tribhuwan International Airport",
-			"GROUPNAME" : ""
+			"GROUPNAME" : "",
+			"image" :
+			
+			  	"https://ihg.scene7.com/is/image/ihg/holiday-inn-meridian-3788518010-4x3"
+		
+			
 		},
 		{
 			"Hotelename":"Hotel Shankar",
@@ -21,7 +26,10 @@
 				"ExtendedPrice": 87.2000,
 				"stars":"3.5star",
 				"Location": "Lazimpat",
-				 "Status": "A"
+				 "Status": "A",
+				 	"image" :
+			
+			  	"https://static1.squarespace.com/static/53ecd1bde4b0a6f9524254f8/53f701bbe4b0d9e8e26e714b/53f701cfe4b0d9e8e26e715e/1410260095042/Shankar_BirdsEye+web.jpg"
 		},
 		{
 	    	"Hotelename":"Club Himalaya Resort",
@@ -32,7 +40,11 @@
 								"stars":"4star",
 					"ExtendedPrice": 87.2000,
 						"Location": "Nagarkot Kathmandu Nepal",
-					 "Status": "A"
+					 "Status": "A",
+					 	"image" :
+			
+			  	"http://www.clubhimalaya.com/timthumb.php?src=http://www.clubhimalaya.com/images/package/ZNu7j-ch6.jpg&w=1350&h=540&q=100"
+		
 		},
 		{
 				"Hotelename":"Avataar Kathmandu Nepal",
@@ -43,7 +55,8 @@
 					"ExtendedPrice": 87.2000,
 					"Location": "Thamel kathmandu Nepal",
 									"stars":"3.5star",
-									 "Status": "B"
+									 "Status": "B",
+									 "image":"https://images.trvl-media.com/hotels/10000000/9030000/9024000/9023929/9023929_151_z.jpg"
 			
 		},
 		{	"Hotelename":"HOTEL OSHO HOME",
@@ -54,7 +67,8 @@
 					"ExtendedPrice": 87.2000,
 					"Location": "Thamel kathmandu Nepal",
 									"stars":"3.5star",
-									 "Status": "B"
+									 "Status": "B",
+									 "image" :"https://s-ec.bstatic.com/images/hotel/max1280x900/443/44327636.jpg"
 		},
 		{
 				"Hotelename":"OYO 104 BALTIC INN",
@@ -65,7 +79,8 @@
 					"ExtendedPrice": 87.2000,
 					"Location": "TIA kathmandu Nepal",
 									"stars":"6.5star",
-				                    "Status": "B"
+				                    "Status": "B",
+				                    "image" : "https://www.oyorooms.com/15266-budget-oyo-104-hotel-baltic-inn-kathmandu"
 		},
 		{
 				"Hotelename":"Hotel Yambhu ",
@@ -76,7 +91,8 @@
 					"ExtendedPrice": 87.2000,
 					"Location":"Thamel Kathmandu Nepal",
 									"stars":"3.5star",
-									 "Status": "B"
+									 "Status": "B",
+									 "image" : "https://media-cdn.tripadvisor.com/media/photo-s/04/83/14/8a/this-is-the-hotel-yambu.jpg"
 		},
 			{
 				"Hotelename":"Hotel Dwarika ",
@@ -86,8 +102,9 @@
 				"priceperdaywithmealandbreakfast":2000,
 					"ExtendedPrice": 87.2000,
 					"Location":"TIA Kathmandu Nepal",
-									"stars":"3.5star",
-									 "Status": "B"
+					"stars":"3.5star",
+					"Status": "B",
+			     	 "image": "https://www.royalmt.com.np/blog/wp-content/uploads/sites/2/2013/11/pool-area.jpg"
 		}
 		
 		]}
